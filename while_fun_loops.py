@@ -18,10 +18,10 @@
 # 		print count
 # 	count +=1
 
-fruits = ["apples", "oranges", "bananas"]
+# fruits = ["apples", "oranges", "bananas"]
 
-index = 0
+# index = 0
 
-while index < len(fruits):
-	print fruits [index]
-	index = index + 1
+# while index < len(fruits):
+# 	print fruits [index]
+# 	index = index + 1
