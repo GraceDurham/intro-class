@@ -1,67 +1,38 @@
-# contacts = {"grace": {"name":"gracedurham", "phonenumber":"8168302572"}, "Timea": {"name":"timeaurban", "phonenumber": "6502769342"}, "daniella": {"name":"daniellarivera", "phonenumber":"4152696022"}}
-
-# def add_contacts(): 
-# 	pass
-
-
-# def change_number():
-# 	pass 
-
-
-# def change_name():
-# 	pass 
-
-# def menu():
-# 	print "Press 1 t"
-
-
-
-
-# def main():
-# 	grace =	contacts["grace"]
-# 	grace["phonenumber"] = "88888888888"
-
-
-# if __name__ == '__main__':
-# 		main()	
-
-
 class Contact(object):
-	def __init__(self, first_name, last_name, email = "", mobile = "", work = ""):
-		self.first_name= first_name
-		self.last_name= last_name
-		self.email=email 
-		self.mobile=mobile 
-		self.work=work 
+	def __init__(self, first_name, last_name,
+				 mobile_number = "", email = "", 
+				 work_number = ""):
+		self.first_name = first_name
+		self.last_name = last_name
+		self.mobile_number = mobile_number
+		self.email = email
+		self.work_number = work_number
 
-	def send_text(self, message="hi"):
-		print "to:  %s - %s" % (self.mobile, message)
+	def send_text(self):
+		print "To: %s - Hello! How are you?" %  (self.mobile_number) 
 
-	def send_email(self, message):
-		print "to: %s - %s"	% (self.email, message)
+
 
 def main():
-	contact_list=[]
+	contact_jen = Contact("Jennifer", "Kim", mobile_number = "333-333-3333")
+	contact_Stephanie = Contact("Stephanie","Boyette")
+	contact_js = Contact("Jenn", "Boyette", mobile_number = "555-555-5555")
 
-	name1=Contact("Jon", "Snow",mobile="8168302572",email="Jonsnow@gmail.com")
-	name2=Contact("Tyrion", "Lannister", mobile = "4156995555", email = "tyrion@gmail.com")
-	name3 = Contact("Danaerys", "Dragon Lady", mobile = "411211222", email = "dragonlady@gmail.com")
-	name1.send_text("You know nothing John snow")
-	name1.send_email("You still know nothing John Snow")
-
-	contact_list.append(name1)
-	contact_list.append(name2)
-	contact_list.append(name3)
-
-	for item in contact_list:
-		print item.first_name, item.last_name, item.email, item.mobile
-		print item.send_text("Hey everyone in GoT!")
-
-
-
+	contact_list = []
+	contact_list.append(contact_jen)
+	contact_list.append(contact_Stephanie)
+	contact_list.append(contact_js)
 	
+	# print contact_list
+
+	# print contact_Stephanie.first_name
+
+	for contact_object in contact_list:
+		print contact_object.first_name
+		print contact_object.last_name
+		contact_object.send_text()
+
+print __name__
 
 if __name__ == '__main__':
-	main()	
-
-
+	main()
